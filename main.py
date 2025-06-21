@@ -13,7 +13,7 @@ while True:
     interface.opcaoMenu(4, 'Estatísticas gerais')
     interface.opcaoMenu(5, 'Exportar dados')
     interface.opcaoMenu(0, 'Sair')
-#opcao -> limitar o input para 0 a 5 (está aceitando outros números)
+    #opcao -> limitar o input para 0 a 5 (está aceitando outros números)
     print()
     try:
         opcao = int(input('Qual opção você deseja? '))
@@ -21,31 +21,31 @@ while True:
           print(f'{interface.cores(1)}ERRO! Digite apenas números inteiro.{interface.cores(9)}')
           print('Exemplo: "1"')
           continue
-#opcao 1
+    #opcao 1
     if opcao == 1:
         print()
         interface.titulo('> OPÇÃO 1 <')
         novogasto = dados.cadastrarGasto()
         gastos.append(novogasto.copy())
-#opcao 2
+    #opcao 2
     elif opcao == 2:
          print()
          interface.titulo('> OPÇÃO 2 <')
          print()
          dados.listarGastos(gastos)
-#opcao 3
+    #opcao 3
     elif opcao == 3:
         print()
         interface.titulo('> OPÇÃO 3 <')
         print()
         dados.totalCategoria(gastos)
-#opcao 4
+    #opcao 4
     elif opcao == 4:
          print()
          interface.titulo('> OPÇÃO 4 <')
          print()
          dados.estatisticasGerais(gastos)
-#opcao 5
+    #opcao 5
     elif opcao == 5:
          print()
          interface.titulo('> OPÇÃO 5 <')
@@ -54,7 +54,7 @@ while True:
          sleep(3)
          print()
          dados.exportarDados(gastos)
-#opcao 0
+    #opcao 0
     if opcao == 0:
         print()
         interface.titulo('Saindo do programa...')
