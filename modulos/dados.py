@@ -57,6 +57,73 @@ def cadastrarGasto(lista):
     return novogasto
 
 
+def editarGasto(lista):
+    while True:
+        print()
+        try:
+            editar = int(input('Qual o ID do gasto que você quer editar? '))
+        except ValueError:
+            print(f'{interface.cores(1)}ERRO! Digite apenas números inteiro.{interface.cores(9)}')
+            print('Exemplo: "1"')
+            continue
+        else:
+            if editar >= len(lista) or editar < 0:
+                print(f'{interface.cores(1)}ERRO! ID inválido.{interface.cores(9)}')
+                continue
+            else:
+                break
+    #descricao
+    while True:
+        print()
+        descricao = str(input('Descrição: ')).strip().title()
+        if descricao == '':
+            print(f'{interface.cores(1)}ERRO! Descrição em branco.{interface.cores(9)}')
+            continue
+        else:
+            print(f'{interface.cores(2)}Descrição "{lista[editar]['descricao']}" trocada por ', end='') 
+            lista[editar]['descricao'] = descricao
+            print(f'"{descricao}" com sucesso!{interface.cores(9)}')
+            break
+    #valor
+    while True:
+        print()
+        valor = str(input('Valor: R$')).replace(' ', '').replace(',', '.')
+        try:
+            float(valor)
+        except ValueError:
+            print(f'{interface.cores(1)}ERRO! "R${valor.replace('.', ',')}" não é um número válido.{interface.cores(9)}')
+            continue
+        else:
+            print(f'{interface.cores(2)}Valor "R${str(lista[editar]['valor']).replace('.', ',')}" trocado por ', end='')
+            lista[editar]['valor'] = float(valor)
+            print(f'"R${str(valor).replace('.', ',')}" com sucesso!{interface.cores(9)}')
+            break
+    #categoria
+    while True:
+        print()
+        categoria = str(input('Categoria: ')).strip().title()
+        if categoria == '':
+            print(f'{interface.cores(1)}ERRO! Categoria em branco.{interface.cores(9)}')
+            continue
+        else:
+            print(f'{interface.cores(2)}Categoria "{lista[editar]['categoria']}" trocada por ', end='')
+            lista[editar]['categoria'] = categoria
+            print(f'"{categoria}"" com sucesso!{interface.cores(9)}')
+            break
+    #data
+    while True:
+        print()
+        data = str(input('Data: [dd/mm/aaaa] ')).replace(' ', '').replace(',', '/').replace('-', '/')
+        if data == '':
+            print(f'{interface.cores(1)}ERRO! Data em branco.{interface.cores(9)}')
+            continue
+        else:
+            print(f'{interface.cores(2)}Data "{lista[editar]['data']}" trocada por ', end='')
+            lista[editar]['data'] = data
+            print(f'"{data}" com sucesso!{interface.cores(9)}')
+            break
+
+
 def deletarGasto(lista):
     while True:
         print()

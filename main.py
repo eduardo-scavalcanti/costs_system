@@ -8,13 +8,13 @@ interface.titulo('> CadasTrour V1.3 <')
 while True:
     print()
     interface.opcaoMenu(1, 'Cadastrar gasto')
-    interface.opcaoMenu(2, 'Deletar gasto')
-    interface.opcaoMenu(3, 'Listar gastos')
-    interface.opcaoMenu(4, 'Exibir total por categoria')
-    interface.opcaoMenu(5, 'Estatísticas gerais')
-    interface.opcaoMenu(6, 'Exportar dados')
+    interface.opcaoMenu(2, 'Editar gasto')
+    interface.opcaoMenu(3, 'Deletar gasto')
+    interface.opcaoMenu(4, 'Listar gastos')
+    interface.opcaoMenu(5, 'Exibir total por categoria')
+    interface.opcaoMenu(6, 'Estatísticas gerais')
+    interface.opcaoMenu(7, 'Exportar dados')
     interface.opcaoMenu(0, 'Sair')
-    #opcao -> limitar o input para 0 a 5 (está aceitando outros números)
     print()
     try:
         opcao = int(input('Qual opção você deseja? '))
@@ -36,31 +36,36 @@ while True:
          print()
          interface.titulo('> OPÇÃO 2 <')
          print()
-         dados.deletarGasto(gastos)
-         print()
-
+         dados.editarGasto(gastos)
     #opcao 3
     elif opcao == 3:
          print()
          interface.titulo('> OPÇÃO 3 <')
          print()
-         dados.listarGastos(gastos)
+         dados.deletarGasto(gastos)
+         print()
     #opcao 4
     elif opcao == 4:
-        print()
-        interface.titulo('> OPÇÃO 4 <')
-        print()
-        dados.totalCategoria(gastos)
+         print()
+         interface.titulo('> OPÇÃO 4 <')
+         print()
+         dados.listarGastos(gastos)
     #opcao 5
     elif opcao == 5:
-         print()
-         interface.titulo('> OPÇÃO 5 <')
-         print()
-         dados.estatisticasGerais(gastos)
+        print()
+        interface.titulo('> OPÇÃO 5 <')
+        print()
+        dados.totalCategoria(gastos)
     #opcao 6
     elif opcao == 6:
          print()
          interface.titulo('> OPÇÃO 6 <')
+         print()
+         dados.estatisticasGerais(gastos)
+    #opcao 7
+    elif opcao == 7:
+         print()
+         interface.titulo('> OPÇÃO 7 <')
          print()
          print('Exportando gastos...')
          sleep(3)
@@ -73,8 +78,3 @@ while True:
         sleep(3)
         break
 
-
-
-#CRUD -> Create, read, update e delete (funções básicas que a maioria dos sistemas tem) (editar, deletar)
-#ID -> Adicionar um ID para cada gasto para o CRUD
-#
