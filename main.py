@@ -4,8 +4,22 @@ from time import sleep
 gastos = []
 #titulo
 interface.titulo('> CadasTrour V1.3 <')
+sleep(1.5)
+#nome
+while True:
+    print()
+    nome = str(input('Olá! Digite o seu 1° nome: ')).strip().title()
+    if nome == '':
+        print(f'{interface.cores(1)}ERRO! Nome em branco.{interface.cores(9)}')
+        continue
+    else:
+        print(f'Seja bem-vindo(a), {interface.cores(3)}{nome}{interface.cores(9)}.')
+    sleep(1.5)
+    break
 #menu
 while True:
+    print()
+    interface.titulo('> MENU <')
     print()
     interface.opcaoMenu(1, 'Cadastrar gasto')
     interface.opcaoMenu(2, 'Editar gasto')
@@ -19,8 +33,7 @@ while True:
     try:
         opcao = int(input('Qual opção você deseja? '))
     except ValueError:
-          print(f'{interface.cores(1)}ERRO! Digite apenas números inteiro.{interface.cores(9)}')
-          print('Exemplo: "1"')
+          print(f'{interface.cores(1)}ERRO! O valor digitado não é válido.\nDigite apenas número inteiros.{interface.cores(9)}')
           continue
     else:
          if opcao < 0 or opcao > 7:
@@ -75,7 +88,9 @@ while True:
     if opcao == 0:
         print()
         interface.titulo('Saindo do programa...')
-        sleep(3)
+        sleep(1.5)
+        print()
+        print(f'Até a próxima, {interface.cores(3)}{nome}{interface.cores(9)}!')
         break
 
 

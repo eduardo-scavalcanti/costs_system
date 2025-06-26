@@ -46,14 +46,53 @@ def cadastrarGasto(lista):
     #data -> criar uma validação para no caso de letras, do jeito que está o usuário pode adicionar letras nesse campo
     while True:
         print()
-        data = str(input('Data [dd/mm/aaaa]: ')).replace(' ', '').replace('-', '/').replace('.', '/')
-        if data == '':
-            print(f'{interface.cores(1)}ERRO! Data em branco.{interface.cores(9)}')
+        dia = str(input('Dia [dd]: ')).replace(' ', '')
+        try:
+            int(dia)
+        except:
+            print(f'{interface.cores(1)}ERRO! Utilize apenas números inteiros.{interface.cores(9)}')
             continue
         else:
-            print(f'{interface.cores(2)}Data "{data}" adicionada com sucesso!{interface.cores(9)}')
-            novogasto['data'] = data
-            break
+            if int(dia) < 1 or int(dia) > 31:
+                print(f'{interface.cores(1)}ERRO! O dia "{dia}" não é válido.\n Escolha um dia entre 1 e 31.{interface.cores(9)}')
+                continue
+            else:
+                print(f'{interface.cores(2)}Dia "{dia}" adicionado com sucesso!{interface.cores(9)}')
+                break
+    while True:
+        print()
+        mes = str(input('Mês [mm]: ')).replace(' ', '')
+        try:
+            int(mes)
+        except ValueError:
+            print(f'{interface.cores(1)}ERRO! Utilize apenas números inteiros.{interface.cores(9)}')
+            continue
+        else:
+            if int(mes) < 1 or int(mes) > 12:
+                print(f'{interface.cores(1)}ERRO! O mês "{mes}" não é válido.\n Escolha um mês entre 1 e 12.{interface.cores(9)}')
+                continue  
+            else:
+                print(f'{interface.cores(2)}Mês "{mes}" adicionado com sucesso!{interface.cores(9)}')
+                break
+    while True:
+        print()
+        ano = str(input('Ano [aaaa]: ')).replace(' ', '')
+        try:
+            int(ano)
+        except ValueError:
+            print(f'{interface.cores(1)}ERRO! Utilize apenas números inteiros.{interface.cores(9)}')
+            continue
+        else:
+            if int(ano) < 0:
+                print(f'{interface.cores(1)}ERRO! O ano "{ano}" não é válido.\n Escolha um ano acima de 0.{interface.cores(9)}')
+                continue
+            else:
+                print(f'{interface.cores(2)}Ano "{ano}" adicionado com sucesso!{interface.cores(9)}')
+                break
+    data = f'{dia}/{mes}/{ano}'
+    print()
+    print(f'{interface.cores(2)}Data "{data}" adicionado com sucesso!{interface.cores(9)}')
+    novogasto ['data'] = data
     return novogasto
 
 
@@ -113,15 +152,55 @@ def editarGasto(lista):
     #data
     while True:
         print()
-        data = str(input('Data: [dd/mm/aaaa] ')).replace(' ', '').replace(',', '/').replace('-', '/')
-        if data == '':
-            print(f'{interface.cores(1)}ERRO! Data em branco.{interface.cores(9)}')
+        dia = str(input('Dia [dd]: ')).replace(' ', '')
+        try:
+            int(dia)
+        except:
+            print(f'{interface.cores(1)}ERRO! Utilize apenas números inteiros.{interface.cores(9)}')
             continue
         else:
-            print(f'{interface.cores(2)}Data "{lista[editar]['data']}" trocada por ', end='')
-            lista[editar]['data'] = data
-            print(f'"{data}" com sucesso!{interface.cores(9)}')
-            break
+            if int(dia) < 1 or int(dia) > 31:
+                print(f'{interface.cores(1)}ERRO! O dia "{dia}" não é válido.\n Escolha um dia entre 1 e 31.{interface.cores(9)}')
+                continue
+            else:
+                print(f'{interface.cores(2)}Dia "{dia}" adicionado com sucesso!{interface.cores(9)}')
+                break
+    while True:
+        print()
+        mes = str(input('Mês [mm]: ')).replace(' ', '')
+        try:
+            int(mes)
+        except ValueError:
+            print(f'{interface.cores(1)}ERRO! Utilize apenas números inteiros.{interface.cores(9)}')
+            continue
+        else:
+            if int(mes) < 1 or int(mes) > 12:
+                print(f'{interface.cores(1)}ERRO! O mês "{mes}" não é válido.\n Escolha um mês entre 1 e 12.{interface.cores(9)}')
+                continue  
+            else:
+                print(f'{interface.cores(2)}Mês "{mes}" adicionado com sucesso!{interface.cores(9)}')
+                break
+    while True:
+        print()
+        ano = str(input('Ano [aaaa]: ')).replace(' ', '')
+        try:
+            int(ano)
+        except ValueError:
+            print(f'{interface.cores(1)}ERRO! Utilize apenas números inteiros.{interface.cores(9)}')
+            continue
+        else:
+            if int(ano) < 0:
+                print(f'{interface.cores(1)}ERRO! O ano "{ano}" não é válido.\n Escolha um ano acima de 0.{interface.cores(9)}')
+                continue
+            else:
+                print(f'{interface.cores(2)}Ano "{ano}" adicionado com sucesso!{interface.cores(9)}')
+                break
+    data = f'{dia}/{mes}/{ano}'
+    print()
+    print(f'{interface.cores(2)}Data "{lista[editar]['data']}" trocada por ', end='')
+    lista[editar]['data'] = data
+    print(f'"{data}" com sucesso!{interface.cores(9)}')
+
 
 
 def deletarGasto(lista):
