@@ -8,10 +8,11 @@ interface.titulo('> CadasTrour V1.3 <')
 while True:
     print()
     interface.opcaoMenu(1, 'Cadastrar gasto')
-    interface.opcaoMenu(2, 'Listar gastos')
-    interface.opcaoMenu(3, 'Exibir total por categoria')
-    interface.opcaoMenu(4, 'Estatísticas gerais')
-    interface.opcaoMenu(5, 'Exportar dados')
+    interface.opcaoMenu(2, 'Deletar gasto')
+    interface.opcaoMenu(3, 'Listar gastos')
+    interface.opcaoMenu(4, 'Exibir total por categoria')
+    interface.opcaoMenu(5, 'Estatísticas gerais')
+    interface.opcaoMenu(6, 'Exportar dados')
     interface.opcaoMenu(0, 'Sair')
     #opcao -> limitar o input para 0 a 5 (está aceitando outros números)
     print()
@@ -21,34 +22,45 @@ while True:
           print(f'{interface.cores(1)}ERRO! Digite apenas números inteiro.{interface.cores(9)}')
           print('Exemplo: "1"')
           continue
+    else:
+         if opcao < 0 or opcao > 7:
+              print(f'{interface.cores(1)}ERRO! Opção inválida.{interface.cores(9)}')
     #opcao 1
     if opcao == 1:
         print()
         interface.titulo('> OPÇÃO 1 <')
-        novogasto = dados.cadastrarGasto()
+        novogasto = dados.cadastrarGasto(gastos)
         gastos.append(novogasto.copy())
     #opcao 2
     elif opcao == 2:
          print()
          interface.titulo('> OPÇÃO 2 <')
          print()
-         dados.listarGastos(gastos)
+         dados.deletarGasto(gastos)
+         print()
+
     #opcao 3
     elif opcao == 3:
-        print()
-        interface.titulo('> OPÇÃO 3 <')
-        print()
-        dados.totalCategoria(gastos)
+         print()
+         interface.titulo('> OPÇÃO 3 <')
+         print()
+         dados.listarGastos(gastos)
     #opcao 4
     elif opcao == 4:
-         print()
-         interface.titulo('> OPÇÃO 4 <')
-         print()
-         dados.estatisticasGerais(gastos)
+        print()
+        interface.titulo('> OPÇÃO 4 <')
+        print()
+        dados.totalCategoria(gastos)
     #opcao 5
     elif opcao == 5:
          print()
          interface.titulo('> OPÇÃO 5 <')
+         print()
+         dados.estatisticasGerais(gastos)
+    #opcao 6
+    elif opcao == 6:
+         print()
+         interface.titulo('> OPÇÃO 6 <')
          print()
          print('Exportando gastos...')
          sleep(3)

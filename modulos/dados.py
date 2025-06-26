@@ -1,6 +1,9 @@
 from modulos import interface
-def cadastrarGasto():
+def cadastrarGasto(lista):
     novogasto = {}
+    #id
+    id = len(lista)
+    novogasto['id'] = id
     #descricao
     while True:
         print()
@@ -54,12 +57,32 @@ def cadastrarGasto():
     return novogasto
 
 
+def deletarGasto(lista):
+    while True:
+        print()
+        try:
+            deletar = int(input('Qual o ID do gasto que você quer deletar? '))
+        except ValueError:
+            print(f'{interface.cores(1)}ERRO! Digite apenas números inteiro.{interface.cores(9)}')
+            print('Exemplo: "1"')
+            continue
+        else:
+            if deletar >= len(lista) or deletar < 0:
+                print(f'{interface.cores(1)}ERRO! ID inválido.{interface.cores(9)}')
+                continue
+            else:
+                del lista[deletar]
+                print(f'{interface.cores(2)}Gasto "#{deletar}" removido com sucesso!{interface.cores(9)}')
+                break
+
+
 def listarGastos(lista):
     if len(lista) == 0:
         print('Não há gastos cadastrados.')
         return
     else:
         for g in lista:
+            print(f'ID: {g["id"]}')
             print(f'Descrição: {g["descricao"]}')
             print(f'Valor: R${g["valor"]:.2f}')
             print(f'Categoria: {g["categoria"]}')
