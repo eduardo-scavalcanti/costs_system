@@ -78,3 +78,5 @@ while True:
         sleep(3)
         break
 
+
+# Resolver o valor que não aparece com 2 casas decimais na hora de editar o VALOR

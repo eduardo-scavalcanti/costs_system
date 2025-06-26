@@ -140,6 +140,11 @@ def deletarGasto(lista):
             else:
                 del lista[deletar]
                 print(f'{interface.cores(2)}Gasto "#{deletar}" removido com sucesso!{interface.cores(9)}')
+            if deletar < len(lista):
+                for g in range(deletar, len(lista)):
+                    lista[g]['id'] -= 1
+                break
+            else:
                 break
 
 
