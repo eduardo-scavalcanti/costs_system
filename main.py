@@ -3,7 +3,7 @@ from modulos import dados
 from time import sleep
 gastos = []
 #titulo
-interface.titulo('> CadasTrour V1.3 <')
+interface.titulo('> REGIX <')
 sleep(1.5)
 #nome
 while True:
