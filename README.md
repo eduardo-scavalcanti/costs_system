@@ -10,6 +10,7 @@ With REGIX, you can:
 - [x] Export all data to a .txt file.
 
 This was my first Python project, created to practice and learn. So, it probably has some bugs.
+
 ---
 [pt]
 
