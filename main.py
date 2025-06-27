@@ -93,5 +93,3 @@ while True:
         print(f'Até a próxima, {interface.cores(3)}{nome}{interface.cores(9)}!')
         break
 
-
-# Resolver o valor que não aparece com 2 casas decimais na hora de editar o VALOR
