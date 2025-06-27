@@ -8,6 +8,7 @@ With REGIX, you can:
 - [x] View the list of expenses and totals by category;
 - [x] See general statistics (like average, highest, and lowest expenses);
 - [x] Export all data to a .txt file.
+
 This was my first Python project, created to practice and learn. So, it probably has some bugs.
 ---
 [pt]
