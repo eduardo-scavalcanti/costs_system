@@ -54,7 +54,7 @@ def cadastrarGasto(lista):
             continue
         else:
             if int(dia) < 1 or int(dia) > 31:
-                print(f'{interface.cores(1)}ERRO! O dia "{dia}" não é válido.\n Escolha um dia entre 1 e 31.{interface.cores(9)}')
+                print(f'{interface.cores(1)}ERRO! O dia "{dia}" não é válido.\nEscolha um dia entre 1 e 31.{interface.cores(9)}')
                 continue
             else:
                 print(f'{interface.cores(2)}Dia "{dia}" adicionado com sucesso!{interface.cores(9)}')
@@ -69,7 +69,7 @@ def cadastrarGasto(lista):
             continue
         else:
             if int(mes) < 1 or int(mes) > 12:
-                print(f'{interface.cores(1)}ERRO! O mês "{mes}" não é válido.\n Escolha um mês entre 1 e 12.{interface.cores(9)}')
+                print(f'{interface.cores(1)}ERRO! O mês "{mes}" não é válido.\nEscolha um mês entre 1 e 12.{interface.cores(9)}')
                 continue  
             else:
                 print(f'{interface.cores(2)}Mês "{mes}" adicionado com sucesso!{interface.cores(9)}')
@@ -84,7 +84,7 @@ def cadastrarGasto(lista):
             continue
         else:
             if int(ano) < 0:
-                print(f'{interface.cores(1)}ERRO! O ano "{ano}" não é válido.\n Escolha um ano acima de 0.{interface.cores(9)}')
+                print(f'{interface.cores(1)}ERRO! O ano "{ano}" não é válido.\nEscolha um ano acima de 0.{interface.cores(9)}')
                 continue
             else:
                 print(f'{interface.cores(2)}Ano "{ano}" adicionado com sucesso!{interface.cores(9)}')
