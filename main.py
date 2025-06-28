@@ -93,3 +93,4 @@ while True:
         print(f'Até a próxima, {interface.cores(3)}{nome}{interface.cores(9)}!')
         break
 
+#oi
