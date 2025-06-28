@@ -85,7 +85,7 @@ while True:
          print()
          dados.exportarDados(gastos)
     #opcao 0
-    if opcao == 0:
+    elif opcao == 0:
         print()
         interface.titulo('Saindo do programa...')
         sleep(1.5)
@@ -93,4 +93,3 @@ while True:
         print(f'Até a próxima, {interface.cores(3)}{nome}{interface.cores(9)}!')
         break
 
-#oi
