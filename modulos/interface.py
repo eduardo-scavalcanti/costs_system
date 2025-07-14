@@ -34,7 +34,7 @@ def cores(x):
         return f'\033[m'
 
 
-def titulo_com_espaco(msg):
+def titulo(msg):
     print('-' * 40)
     print(msg.center(37))
     print('-' * 40)
