@@ -22,6 +22,7 @@ while True:
     else:
          if opcao < 0 or opcao > 7:
               print(f'{interface.cores(1)}ERRO! Opção inválida.{interface.cores(9)}')
+              continue
     if opcao in menu.opcoes_menu:
          menu.opcoes_menu[opcao](gastos)
     elif opcao == 0:

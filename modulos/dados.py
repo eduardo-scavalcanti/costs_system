@@ -10,12 +10,12 @@ def nome():
         return nome
 
 
-def cadastrar_gasto(lista):
-    novogasto = {}
-    #id
+def cadastrar_id(lista):
     id = len(lista)
-    novogasto['id'] = id
-    #descricao
+    return id
+
+
+def cadastrar_descricao():
     while True:
         descricao = str(input('Descrição: ')).strip().title()
         if descricao == '':
@@ -23,9 +23,12 @@ def cadastrar_gasto(lista):
             continue
         else:
             print(f'{interface.cores(2)}Descrição "{descricao}" adicionada com sucesso!{interface.cores(9)}')
+            return descricao
             novogasto['descricao'] = descricao
             break
-    #valor
+
+
+def cadastrar_valor():
     while True:
         print()
         valor = str(input('Valor: R$')).replace(' ', '').replace(',', '.')
@@ -40,9 +43,10 @@ def cadastrar_gasto(lista):
                 continue
             else:
                 print(f'{interface.cores(2)}Valor "R${valor.replace('.', ',')}" adicionado com sucesso!{interface.cores(9)}')
-                novogasto['valor'] = float(valor)
-        break
-    #categoria
+                return valor
+
+
+def cadastrar_categoria():
     while True:
         print()
         categoria = str(input('Categoria: ')).strip().title()
@@ -51,8 +55,10 @@ def cadastrar_gasto(lista):
             continue
         else:
             print(f'{interface.cores(2)}Categoria "{categoria}" adicionada com sucesso!{interface.cores(9)}')
-            novogasto['categoria'] = categoria
-            break
+            return categoria
+
+
+def cadastrar_data():
     #data -> criar uma validação para no caso de letras, do jeito que está o usuário pode adicionar letras nesse campo
     while True:
         print()
@@ -102,6 +108,20 @@ def cadastrar_gasto(lista):
     data = f'{dia}/{mes}/{ano}'
     print()
     print(f'{interface.cores(2)}Data "{data}" adicionado com sucesso!{interface.cores(9)}')
+    return data
+
+
+def cadastrar_gasto(lista):
+    novogasto = {}
+    id = cadastrar_id(lista)
+    novogasto['id'] = id
+    descricao = cadastrar_descricao()
+    novogasto['descricao'] = descricao
+    valor = cadastrar_valor()
+    novogasto['valor'] = float(valor)
+    categoria = cadastrar_categoria()
+    novogasto['categoria'] = categoria
+    data = cadastrar_data()
     novogasto ['data'] = data
     return novogasto
 
@@ -210,7 +230,6 @@ def editar_gasto(lista):
     print(f'{interface.cores(2)}Data "{lista[editar]['data']}" trocada por ', end='')
     lista[editar]['data'] = data
     print(f'"{data}" com sucesso!{interface.cores(9)}')
-
 
 
 def deletar_gasto(lista):
