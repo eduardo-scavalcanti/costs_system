@@ -1,4 +1,15 @@
 from modulos import interface
+def nome():
+    while True:
+        nome = str(input('Olá! Digite o seu 1° nome: ')).strip().title()
+        if nome == '':
+            print(f'{interface.cores(1)}ERRO! Nome em branco.{interface.cores(9)}')
+            continue
+        else:
+            print(f'Seja bem-vindo(a), {interface.cores(3)}{nome}{interface.cores(9)}.')
+        return nome
+
+
 def cadastrar_gasto(lista):
     novogasto = {}
     #id

@@ -6,15 +6,8 @@ gastos = []
 interface.titulo('> REGIX <')
 sleep(1.5)
 #nome
-while True:
-    nome = str(input('Olá! Digite o seu 1° nome: ')).strip().title()
-    if nome == '':
-        print(f'{interface.cores(1)}ERRO! Nome em branco.{interface.cores(9)}')
-        continue
-    else:
-        print(f'Seja bem-vindo(a), {interface.cores(3)}{nome}{interface.cores(9)}.')
-    sleep(1.5)
-    break
+nome = dados.nome()
+sleep(1.5)
 #menu
 while True:
     interface.titulo('> MENU <')
