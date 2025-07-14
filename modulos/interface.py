@@ -35,12 +35,6 @@ def cores(x):
 
 
 def titulo(msg):
-    print('-' * 40)
-    print(msg.center(37))
-    print('-' * 40)
-
-
-def titulo_com_espaco(msg):
     print()
     print('-' * 40)
     print(msg.center(37))
