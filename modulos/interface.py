@@ -40,6 +40,17 @@ def titulo(msg):
     print('-' * 40)
 
 
+def menu_principal():
+    opcaoMenu(1, 'Cadastrar gasto')
+    opcaoMenu(2, 'Editar gasto')
+    opcaoMenu(3, 'Deletar gasto')
+    opcaoMenu(4, 'Listar gastos')
+    opcaoMenu(5, 'Exibir total por categoria')
+    opcaoMenu(6, 'Estatísticas gerais')
+    opcaoMenu(7, 'Exportar dados')
+    opcaoMenu(0, 'Sair')
+
+
 def opcaoMenu(x, msg):
     '''Adiciona uma linha personalizada para criação de menu, conta com esta estrutura:
     [número] -> texto
@@ -48,4 +59,3 @@ def opcaoMenu(x, msg):
     param "msg": texto que será adicionado a linha
     '''
     print(f'{cores(0)}[{x}]{cores(9)} -> {cores(6)}{msg}{cores(9)}')
-
