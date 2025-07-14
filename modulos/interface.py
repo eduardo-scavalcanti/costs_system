@@ -51,6 +51,7 @@ def menu_principal():
     opcao_menu(6, 'Estatísticas gerais')
     opcao_menu(7, 'Exportar dados')
     opcao_menu(0, 'Sair')
+    print()
 
 
 def opcao_menu(x, msg):

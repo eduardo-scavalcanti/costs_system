@@ -44,5 +44,5 @@ opcoes_menu = {
     4: executar_opcao_4,
     5: executar_opcao_5,
     6: executar_opcao_6,
-    7: executar_opcao_7,
+    7: executar_opcao_7
 }

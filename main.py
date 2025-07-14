@@ -13,7 +13,6 @@ sleep(1.5)
 while True:
     interface.titulo('> MENU <')
     interface.menu_principal()
-    print()
     try:
         opcao = int(input('Qual opção você deseja? '))
     except ValueError:
