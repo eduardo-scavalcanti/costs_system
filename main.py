@@ -35,39 +35,39 @@ while True:
     if opcao == 1:
         print()
         interface.titulo('> OPÇÃO 1 <')
-        novogasto = dados.cadastrarGasto(gastos)
+        novogasto = dados.cadastrar_gasto(gastos)
         gastos.append(novogasto.copy())
     #opcao 2
     elif opcao == 2:
          print()
          interface.titulo('> OPÇÃO 2 <')
          print()
-         dados.editarGasto(gastos)
+         dados.editar_gasto(gastos)
     #opcao 3
     elif opcao == 3:
          print()
          interface.titulo('> OPÇÃO 3 <')
          print()
-         dados.deletarGasto(gastos)
+         dados.deletar_gasto(gastos)
          print()
     #opcao 4
     elif opcao == 4:
          print()
          interface.titulo('> OPÇÃO 4 <')
          print()
-         dados.listarGastos(gastos)
+         dados.listar_gastos(gastos)
     #opcao 5
     elif opcao == 5:
         print()
         interface.titulo('> OPÇÃO 5 <')
         print()
-        dados.totalCategoria(gastos)
+        dados.total_categorias(gastos)
     #opcao 6
     elif opcao == 6:
          print()
          interface.titulo('> OPÇÃO 6 <')
          print()
-         dados.estatisticasGerais(gastos)
+         dados.estatisticas_gerais(gastos)
     #opcao 7
     elif opcao == 7:
          print()
@@ -76,7 +76,7 @@ while True:
          print('Exportando gastos...')
          sleep(3)
          print()
-         dados.exportarDados(gastos)
+         dados.exportar_dados(gastos)
     #opcao 0
     elif opcao == 0:
         print()

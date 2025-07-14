@@ -41,17 +41,17 @@ def titulo(msg):
 
 
 def menu_principal():
-    opcaoMenu(1, 'Cadastrar gasto')
-    opcaoMenu(2, 'Editar gasto')
-    opcaoMenu(3, 'Deletar gasto')
-    opcaoMenu(4, 'Listar gastos')
-    opcaoMenu(5, 'Exibir total por categoria')
-    opcaoMenu(6, 'Estatísticas gerais')
-    opcaoMenu(7, 'Exportar dados')
-    opcaoMenu(0, 'Sair')
+    opcao_menu(1, 'Cadastrar gasto')
+    opcao_menu(2, 'Editar gasto')
+    opcao_menu(3, 'Deletar gasto')
+    opcao_menu(4, 'Listar gastos')
+    opcao_menu(5, 'Exibir total por categoria')
+    opcao_menu(6, 'Estatísticas gerais')
+    opcao_menu(7, 'Exportar dados')
+    opcao_menu(0, 'Sair')
 
 
-def opcaoMenu(x, msg):
+def opcao_menu(x, msg):
     '''Adiciona uma linha personalizada para criação de menu, conta com esta estrutura:
     [número] -> texto
 

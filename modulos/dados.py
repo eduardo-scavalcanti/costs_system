@@ -1,5 +1,5 @@
 from modulos import interface
-def cadastrarGasto(lista):
+def cadastrar_gasto(lista):
     novogasto = {}
     #id
     id = len(lista)
@@ -96,7 +96,7 @@ def cadastrarGasto(lista):
     return novogasto
 
 
-def editarGasto(lista):
+def editar_gasto(lista):
     while True:
         print()
         try:
@@ -203,7 +203,7 @@ def editarGasto(lista):
 
 
 
-def deletarGasto(lista):
+def deletar_gasto(lista):
     while True:
         print()
         try:
@@ -227,7 +227,7 @@ def deletarGasto(lista):
                 break
 
 
-def listarGastos(lista):
+def listar_gastos(lista):
     if len(lista) == 0:
         print('Não há gastos cadastrados.')
         return
@@ -241,7 +241,7 @@ def listarGastos(lista):
             print('-' * 30)
 
 
-def totalCategoria(lista):
+def total_categorias(lista):
     if len(lista) == 0:
         print('Não há gastos cadastrados.')
         return
@@ -259,7 +259,7 @@ def totalCategoria(lista):
         return totais
 
 
-def estatisticasGerais(lista):
+def estatisticas_gerais(lista):
     if len(lista) == 0:
         print('Não há gastos cadastrados.')
         return
@@ -293,7 +293,7 @@ def estatisticasGerais(lista):
         print(f'O menor gasto é "{descricaomen}": {interface.cores(2)}R${men:.2f}{interface.cores(9)}'.replace('.', ','))
 
 
-def exportarDados(lista):
+def exportar_dados(lista):
     if len(lista) == 0:
         print('Não há gastos cadastrados.')
         return
