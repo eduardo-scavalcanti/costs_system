@@ -1,5 +1,4 @@
-from modulos import interface
-from modulos import dados
+from modulos import interface, dados, menu
 from time import sleep
 gastos = []
 #titulo
@@ -23,9 +22,7 @@ while True:
               print(f'{interface.cores(1)}ERRO! Opção inválida.{interface.cores(9)}')
     #opcao 1
     if opcao == 1:
-        interface.titulo('> OPÇÃO 1 <')
-        novogasto = dados.cadastrar_gasto(gastos)
-        gastos.append(novogasto.copy())
+        m
     #opcao 2
     elif opcao == 2:
          interface.titulo('> OPÇÃO 2 <')
