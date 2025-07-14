@@ -1,4 +1,5 @@
-import interface, dados
+from modulos import interface
+from modulos import dados
 def executar_opcao_1(lista_gastos):
     interface.titulo('> OPÇÃO 1 <')
     novogasto = dados.cadastrar_gasto(lista_gastos)
@@ -35,3 +36,13 @@ def executar_opcao_7(lista_gastos):
     print('Exportando gastos...')
     dados.exportar_dados(lista_gastos)
 
+
+opcoes_menu = {
+    1: executar_opcao_1,
+    2: executar_opcao_2,
+    3: executar_opcao_3,
+    4: executar_opcao_4,
+    5: executar_opcao_5,
+    6: executar_opcao_6,
+    7: executar_opcao_7,
+}
