@@ -18,9 +18,7 @@ while True:
     break
 #menu
 while True:
-    print()
-    interface.titulo('> MENU <')
-    print()
+    interface.titulo_com_espaco('> MENU <')
     interface.menu_principal()
     print()
     try:
@@ -33,56 +31,41 @@ while True:
               print(f'{interface.cores(1)}ERRO! Opção inválida.{interface.cores(9)}')
     #opcao 1
     if opcao == 1:
-        print()
-        interface.titulo('> OPÇÃO 1 <')
+        interface.titulo_com_espaco('> OPÇÃO 1 <')
         novogasto = dados.cadastrar_gasto(gastos)
         gastos.append(novogasto.copy())
     #opcao 2
     elif opcao == 2:
-         print()
-         interface.titulo('> OPÇÃO 2 <')
-         print()
+         interface.titulo_com_espaco('> OPÇÃO 2 <')
          dados.editar_gasto(gastos)
     #opcao 3
     elif opcao == 3:
-         print()
-         interface.titulo('> OPÇÃO 3 <')
-         print()
+         interface.titulo_com_espaco('> OPÇÃO 3 <')
          dados.deletar_gasto(gastos)
          print()
     #opcao 4
     elif opcao == 4:
-         print()
-         interface.titulo('> OPÇÃO 4 <')
-         print()
+         interface.titulo_com_espaco('> OPÇÃO 4 <')
          dados.listar_gastos(gastos)
     #opcao 5
     elif opcao == 5:
-        print()
-        interface.titulo('> OPÇÃO 5 <')
-        print()
+        interface.titulo_com_espaco('> OPÇÃO 5 <')
         dados.total_categorias(gastos)
     #opcao 6
     elif opcao == 6:
-         print()
-         interface.titulo('> OPÇÃO 6 <')
-         print()
+         interface.titulo_com_espaco('> OPÇÃO 6 <')
          dados.estatisticas_gerais(gastos)
     #opcao 7
     elif opcao == 7:
-         print()
-         interface.titulo('> OPÇÃO 7 <')
-         print()
+         interface.titulo_com_espaco('> OPÇÃO 7 <')
          print('Exportando gastos...')
          sleep(3)
          print()
          dados.exportar_dados(gastos)
     #opcao 0
     elif opcao == 0:
-        print()
-        interface.titulo('Saindo do programa...')
+        interface.titulo_com_espaco('Saindo do programa...')
         sleep(1.5)
-        print()
         print(f'Até a próxima, {interface.cores(3)}{nome}{interface.cores(9)}!')
         break
 

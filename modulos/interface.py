@@ -34,10 +34,18 @@ def cores(x):
         return f'\033[m'
 
 
-def titulo(msg):
+def titulo_com_espaco(msg):
     print('-' * 40)
     print(msg.center(37))
     print('-' * 40)
+
+
+def titulo_com_espaco(msg):
+    print()
+    print('-' * 40)
+    print(msg.center(37))
+    print('-' * 40)
+    print()
 
 
 def menu_principal():
@@ -59,3 +67,4 @@ def opcao_menu(x, msg):
     param "msg": texto que será adicionado a linha
     '''
     print(f'{cores(0)}[{x}]{cores(9)} -> {cores(6)}{msg}{cores(9)}')
+

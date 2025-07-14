@@ -6,7 +6,6 @@ def cadastrar_gasto(lista):
     novogasto['id'] = id
     #descricao
     while True:
-        print()
         descricao = str(input('Descrição: ')).strip().title()
         if descricao == '':
             print(f'{interface.cores(1)}ERRO! Descrição em branco.{interface.cores(9)}')
