@@ -20,38 +20,20 @@ while True:
     else:
          if opcao < 0 or opcao > 7:
               print(f'{interface.cores(1)}ERRO! Opção inválida.{interface.cores(9)}')
-    #opcao 1
     if opcao == 1:
-        m
-    #opcao 2
+        menu.executar_opcao_1(gastos)
     elif opcao == 2:
-         interface.titulo('> OPÇÃO 2 <')
-         dados.editar_gasto(gastos)
-    #opcao 3
+        menu.executar_opcao_2(gastos)
     elif opcao == 3:
-         interface.titulo('> OPÇÃO 3 <')
-         dados.deletar_gasto(gastos)
-         print()
-    #opcao 4
+        menu.executar_opcao_3(gastos)
     elif opcao == 4:
-         interface.titulo('> OPÇÃO 4 <')
-         dados.listar_gastos(gastos)
-    #opcao 5
+        menu.executar_opcao_4(gastos)
     elif opcao == 5:
-        interface.titulo('> OPÇÃO 5 <')
-        dados.total_categorias(gastos)
-    #opcao 6
+        menu.executar_opcao_5(gastos)
     elif opcao == 6:
-         interface.titulo('> OPÇÃO 6 <')
-         dados.estatisticas_gerais(gastos)
-    #opcao 7
+        menu.executar_opcao_6(gastos)
     elif opcao == 7:
-         interface.titulo('> OPÇÃO 7 <')
-         print('Exportando gastos...')
-         sleep(3)
-         print()
-         dados.exportar_dados(gastos)
-    #opcao 0
+        menu.executar_opcao_7(gastos)
     elif opcao == 0:
         interface.titulo('Saindo do programa...')
         sleep(1.5)

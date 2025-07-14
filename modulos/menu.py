@@ -33,7 +33,5 @@ def executar_opcao_6(lista_gastos):
 def executar_opcao_7(lista_gastos):
     interface.titulo('> OPÇÃO 7 <')
     print('Exportando gastos...')
-    sleep(3)
-    print()
     dados.exportar_dados(lista_gastos)
 
